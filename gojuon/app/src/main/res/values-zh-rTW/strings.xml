@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gojuon</string>
+
+    <string name="menu_logo">日文五十音</string>
+    <string name="menu_Study">學習</string>
+    <string name="menu_Quiz">測驗</string>
+    <string name="menu_About">關於我們</string>
+    <string name="menu_Setting">設定</string>
+    <string name="menu_Exit">離開</string>
+</resources>
