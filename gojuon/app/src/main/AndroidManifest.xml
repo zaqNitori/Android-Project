@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".FiftyTone"></activity>
-        <activity android:name=".StudyRecycleView" />
-        <activity android:name=".StudyActivity" />
+        <activity android:name=".StudyActivity">
+        </activity>
+        <activity android:name=".WordListAdapter" />
+        <activity android:name=".FiftyTone" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
