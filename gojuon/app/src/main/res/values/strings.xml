@@ -7,4 +7,11 @@
     <string name="menu_About">About</string>
     <string name="menu_Setting">Setting</string>
     <string name="menu_Exit">Exit</string>
+
+    <string name="hiragana">haragana</string>
+    <string name="katakana">katakana</string>
+    <string name="larrow">go to Previous Card</string>
+    <string name="rarrow">go to Next Card</string>
+    <string name="backArrow">go back</string>
+
 </resources>

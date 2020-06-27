@@ -6,6 +6,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -37,6 +39,12 @@ public class StudyActivity extends AppCompatActivity {
         //設置格線
         recyclerView.addItemDecoration(new DividerItemDecoration(
                 this,DividerItemDecoration.VERTICAL));
-
     }
+
+    public void study_goBack(View v)
+    {
+        finish();
+    }
+
+
 }

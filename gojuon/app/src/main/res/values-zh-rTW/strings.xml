@@ -9,5 +9,10 @@
     <string name="menu_Setting">設定</string>
     <string name="menu_Exit">離開</string>
 
+    <string name="hiragana">平假名</string>
+    <string name="katakana">片假名</string>
+    <string name="larrow">前往上一張字卡</string>
+    <string name="rarrow">前往下一張字卡</string>
+    <string name="backArrow">往回</string>
 
 </resources>

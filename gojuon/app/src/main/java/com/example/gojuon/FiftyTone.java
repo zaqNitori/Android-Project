@@ -10,11 +10,14 @@ import java.util.List;
 
 public class FiftyTone extends AppCompatActivity
 {
-    private ArrayList<CharSequence> hiragana = new ArrayList<CharSequence>();         //平假名 a-0、i-1、u-2、e-3、o-4
-    private ArrayList<CharSequence> katakana = new ArrayList<CharSequence>();         //片假名
+    private ArrayList<CharSequence> wordSound = new ArrayList<CharSequence>();
+    private ArrayList<CharSequence> hiragana = new ArrayList<CharSequence>();
+    private ArrayList<CharSequence> katakana = new ArrayList<CharSequence>();
 
     public FiftyTone()
     {
+        wordSound.add("-kstnhmyrw");
+        wordSound.add("aiueo");
         hiragana.add("あかさたなはまやらわ");
         hiragana.add("いきしちにひみ-り-");
         hiragana.add("うくすつぬふむゆるん");
@@ -25,6 +28,29 @@ public class FiftyTone extends AppCompatActivity
         katakana.add("ウクスツヌフムユルン");
         katakana.add("エケセテネヘメ-レ-");
         katakana.add("オコソトノホモヨロヲ");
+    }
+
+    public String getWordSound(int pos)
+    {
+        switch (pos)
+        {
+            case 16:
+                return "chi";
+            case 17:
+                return "tsu";
+            case 27:
+                return "fu";
+            case 47:
+                return "n";
+            default:
+                break;
+        }
+        String s="";
+        int index = pos/5,vowel = pos%5;
+        if(index != 0)
+            s+=wordSound.get(0).charAt(index);
+        s+=wordSound.get(1).charAt(vowel);
+        return s;
     }
 
     public String getKatagkana(int index)
