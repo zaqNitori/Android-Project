@@ -14,6 +14,7 @@ public class StudyActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private WordListAdapter mAdapter;
     private LinkedList<String> mData = new LinkedList<>();
+    private FiftyTone fiftyTone = new FiftyTone();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,9 @@ public class StudyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_study);
 
         //準備資料
-        for(int i=0;i<20;i++)
+        for(int i=0;i<fiftyTone.getSize();i++)
         {
-            mData.add("word" + i);
+            mData.add(fiftyTone.getKatagkana(i));
         }
 
         //連結元件

@@ -17,6 +17,7 @@
 package com.example.gojuon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,7 @@ public class WordListAdapter extends
 
     private final LinkedList<String> mWordList;
     private final LayoutInflater mInflater;
+    private Context mContext;
 
     class WordViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
@@ -60,20 +62,19 @@ public class WordListAdapter extends
             // Get the position of the item that was clicked.
             int mPosition = getLayoutPosition();
 
-            // Use that to access the affected item in mWordList.
-            String element = mWordList.get(mPosition);
             // Change the word in the mWordList.
-
-            mWordList.set(mPosition, "Clicked! " + element);
-            // Notify the adapter, that the data has changed so it can
+            Intent intent=new Intent(mContext,StudyCard.class);
+            intent.putExtra("position",mPosition);
+            mContext.startActivity(intent);
             // update the RecyclerView to display the data.
-            mAdapter.notifyDataSetChanged();
+            //mAdapter.notifyDataSetChanged();
         }
     }
 
     public WordListAdapter(Context context, LinkedList<String> wordList) {
         mInflater = LayoutInflater.from(context);
         this.mWordList = wordList;
+        mContext = context;
     }
 
     /**
