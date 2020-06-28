@@ -1,16 +1,59 @@
 package com.example.gojuon;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button btnLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setLanguage();
         setContentView(R.layout.activity_main);
+
+        btnLanguage = findViewById(R.id.menu_btnLanguage);
+
+        btnLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setSingleChoiceItems(new String[]{"中文", "English"},
+                        getSharedPreferences("Language", Context.MODE_PRIVATE).getInt("Language", 0),
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                SharedPreferences preferences = getSharedPreferences("Language",Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putInt("Language",which);
+                                editor.apply();
+                                dialog.dismiss();
+
+                                Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                            }
+                        });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
     }
 
     public void gotoStudy(View view)
@@ -22,6 +65,29 @@ public class MainActivity extends AppCompatActivity {
     public void gotoExit(View view)
     {
         finish();
+    }
+
+    private void setLanguage()
+    {
+        SharedPreferences preferences = getSharedPreferences("Language", Context.MODE_PRIVATE);
+        int language = preferences.getInt("Language",0);
+
+        Resources resources = getResources();
+        DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+
+        switch (language)
+        {
+            case 0:
+                configuration.setLocale(Locale.TAIWAN);
+                break;
+            case 1:
+                configuration.setLocale(Locale.ENGLISH);
+                break;
+            default:
+                break;
+        }
+        resources.updateConfiguration(configuration,displayMetrics);
     }
 
 }

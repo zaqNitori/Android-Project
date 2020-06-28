@@ -44,10 +44,10 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/menu_btnSetting"
+        android:id="@+id/menu_btnLanguage"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/menu_Setting"
+        android:text="@string/menu_Language"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"/>
 
