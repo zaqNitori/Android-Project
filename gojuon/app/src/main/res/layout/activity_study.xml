@@ -30,7 +30,7 @@
         android:layout_marginTop="-40dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/white"
-        android:contentDescription="@string/backArrow"
+        android:contentDescription="@string/studyCard_backArrow"
         android:onClick="study_goBack"
         android:src="@mipmap/back" />
 

@@ -23,7 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/menu_Study"
-        android:onClick="gotoStudy"
+        android:onClick="menu_gotoStudy"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"/>
 
@@ -32,6 +32,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/menu_Quiz"
+        android:onClick="menu_gotoQuiz"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"/>
 
@@ -40,6 +41,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/menu_About"
+        android:onClick="menu_AboutUs"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"/>
 
@@ -56,8 +58,9 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/menu_Exit"
-        android:onClick="gotoExit"
+        android:onClick="menu_gotoExit"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"/>
+
 
 </LinearLayout>

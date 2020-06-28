@@ -5,14 +5,25 @@
     <string name="menu_logo">GoJuOn</string>
     <string name="menu_Study">Study</string>
     <string name="menu_Quiz">Quiz</string>
-    <string name="menu_About">About</string>
+    <string name="menu_About">About us</string>
     <string name="menu_Language">Language</string>
     <string name="menu_Exit">Exit</string>
 
-    <string name="hiragana">haragana</string>
-    <string name="katakana">katakana</string>
-    <string name="larrow">go to Previous Card</string>
-    <string name="rarrow">go to Next Card</string>
-    <string name="backArrow">go Back</string>
+    <string name="studyCard_hiragana">hiragana</string>
+    <string name="studyCard_katakana">katakana</string>
+    <string name="studyCard_sound">sound</string>
+    <string name="studyCard_info">show or unshow info</string>
+    <string name="studyCard_larrow">go to Previous Card</string>
+    <string name="studyCard_rarrow">go to Next Card</string>
+    <string name="studyCard_backArrow">go Back</string>
+
+    <string name="quiz_gojuon">GOJUON</string>
+    <string name="quiz_word">WORD</string>
+    <string name="quiz_infoTitle">How to test</string>
+    <string name="quiz_infoGojuonMsg1">1. word choose sound あ -> a</string>
+    <string name="quiz_infoGojuonMsg2">2. sound choose word e -> え</string>
+    <string name="quiz_infoGojuonMsg3">3. choose same sound お -> オ</string>
+    <string name="quiz_infoWordMsg1">1. words choose meaning</string>
+    <string name="quiz_infoWordMsg2">2. meaning choose words</string>
 
 </resources>

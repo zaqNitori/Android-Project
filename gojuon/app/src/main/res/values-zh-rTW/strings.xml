@@ -9,10 +9,21 @@
     <string name="menu_Language">語言</string>
     <string name="menu_Exit">離開</string>
 
-    <string name="hiragana">平假名</string>
-    <string name="katakana">片假名</string>
-    <string name="larrow">前往上一張字卡</string>
-    <string name="rarrow">前往下一張字卡</string>
-    <string name="backArrow">往回</string>
+    <string name="studyCard_hiragana">平假名</string>
+    <string name="studyCard_katakana">片假名</string>
+    <string name="studyCard_sound">讀音</string>
+    <string name="studyCard_info">開啟或隱藏說明</string>
+    <string name="studyCard_larrow">前往上一張字卡</string>
+    <string name="studyCard_rarrow">前往下一張字卡</string>
+    <string name="studyCard_backArrow">往回</string>
+
+    <string name="quiz_gojuon">五十音</string>
+    <string name="quiz_word">詞語</string>
+    <string name="quiz_infoTitle">測驗方式</string>
+    <string name="quiz_infoGojuonMsg1">1. 字選發音 あ -> a</string>
+    <string name="quiz_infoGojuonMsg2">2. 發音選字 e -> え</string>
+    <string name="quiz_infoGojuonMsg3">3. 選擇同樣發音 お -> オ</string>
+    <string name="quiz_infoWordMsg1">1. 詞語選字義</string>
+    <string name="quiz_infoWordMsg2">2. 字義選詞語</string>
 
 </resources>

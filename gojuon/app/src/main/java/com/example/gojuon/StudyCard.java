@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class StudyCard extends AppCompatActivity {
 
     private TextView textSound,textHiragana,textKatakana;
-    private Integer position;
+    private TextView infoSound,infoHiragana,infoKatakana;
+    private Integer position,info = 0;
     private FiftyTone fiftyTone = new FiftyTone();
     private ImageButton lArrow,rArrow;
 
@@ -20,9 +21,12 @@ public class StudyCard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study_card);
 
+        infoSound = findViewById(R.id.studyCard_infoSound);
+        infoHiragana = findViewById(R.id.study_infoHiragana);
+        infoKatakana = findViewById(R.id.study_infoKatakana);
         textHiragana = findViewById(R.id.studyCard_hiraganaTxt);
         textKatakana = findViewById(R.id.studyCard_katakanaTxt);
-        textSound = findViewById(R.id.studyCard_textView);
+        textSound = findViewById(R.id.studyCard_sound);
         lArrow = findViewById(R.id.studyCard_leftArrow);
         rArrow = findViewById(R.id.studyCard_rightArrow);
 
@@ -63,6 +67,23 @@ public class StudyCard extends AppCompatActivity {
     public void studyCard_goBack(View view)
     {
         finish();
+    }
+
+    public void studyCard_setInfo(View v)
+    {
+        info+=1;
+        if(info%2==1)
+        {
+            infoSound.setVisibility(View.VISIBLE);
+            infoKatakana.setVisibility(View.VISIBLE);
+            infoHiragana.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            infoSound.setVisibility(View.INVISIBLE);
+            infoKatakana.setVisibility(View.INVISIBLE);
+            infoHiragana.setVisibility(View.INVISIBLE);
+        }
     }
 
 }

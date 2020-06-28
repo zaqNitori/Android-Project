@@ -56,15 +56,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void gotoStudy(View view)
+    public void menu_gotoStudy(View view)
     {
         Intent intent = new Intent(this,StudyActivity.class);
         startActivity(intent);
     }
 
-    public void gotoExit(View view)
+    public void menu_gotoExit(View view)
     {
         finish();
+    }
+
+    public void menu_gotoQuiz(View v)
+    {
+        Intent intent = new Intent(this,QuizActivity.class);
+        startActivity(intent);
+    }
+
+    public void menu_AboutUs(View v)
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+        alertDialog.setTitle(getText(R.string.menu_About));
+        alertDialog.setMessage("賴璟霆\n黃一烜");
+        alertDialog.setPositiveButton("OK",null);
+        alertDialog.setCancelable(false);
+        alertDialog.show();
     }
 
     private void setLanguage()
