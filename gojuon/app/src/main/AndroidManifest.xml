@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".QuizCard"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".QuizActivity"
             android:screenOrientation="portrait" />
         <activity

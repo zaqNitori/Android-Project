@@ -18,11 +18,11 @@
     <string name="studyCard_backArrow">go Back</string>
 
     <string name="quiz_gojuon">GOJUON</string>
-    <string name="quiz_word">WORD</string>
+    <string name="quiz_word">WORDS</string>
     <string name="quiz_infoTitle">How to test</string>
-    <string name="quiz_infoGojuonMsg1">1. word choose sound あ -> a</string>
-    <string name="quiz_infoGojuonMsg2">2. sound choose word e -> え</string>
-    <string name="quiz_infoGojuonMsg3">3. choose same sound お -> オ</string>
+    <string name="quiz_infoGojuonMsg1">1. word choose sound  あ -> a</string>
+    <string name="quiz_infoGojuonMsg2">2. sound choose word  e -> え</string>
+    <string name="quiz_infoGojuonMsg3">3. choose same sound  お -> オ</string>
     <string name="quiz_infoWordMsg1">1. words choose meaning</string>
     <string name="quiz_infoWordMsg2">2. meaning choose words</string>
 

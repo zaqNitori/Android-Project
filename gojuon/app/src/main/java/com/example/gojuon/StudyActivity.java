@@ -26,7 +26,7 @@ public class StudyActivity extends AppCompatActivity {
         //準備資料
         for(int i=0;i<fiftyTone.getSize();i++)
         {
-            mData.add(fiftyTone.getKatagkana(i));
+            mData.add(fiftyTone.getHiragana(i));
         }
 
         //連結元件

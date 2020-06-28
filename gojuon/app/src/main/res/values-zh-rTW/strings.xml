@@ -20,9 +20,9 @@
     <string name="quiz_gojuon">五十音</string>
     <string name="quiz_word">詞語</string>
     <string name="quiz_infoTitle">測驗方式</string>
-    <string name="quiz_infoGojuonMsg1">1. 字選發音 あ -> a</string>
-    <string name="quiz_infoGojuonMsg2">2. 發音選字 e -> え</string>
-    <string name="quiz_infoGojuonMsg3">3. 選擇同樣發音 お -> オ</string>
+    <string name="quiz_infoGojuonMsg1">1. 字選發音     あ -> a</string>
+    <string name="quiz_infoGojuonMsg2">2. 發音選字     e -> え</string>
+    <string name="quiz_infoGojuonMsg3">3. 選擇同樣發音  お -> オ</string>
     <string name="quiz_infoWordMsg1">1. 詞語選字義</string>
     <string name="quiz_infoWordMsg2">2. 字義選詞語</string>
 

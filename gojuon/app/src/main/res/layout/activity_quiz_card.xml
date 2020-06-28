@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizCard">
+
+    <LinearLayout
+        android:id="@+id/quizCard_questionLayout"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizCard_question"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/quizCard_textQuestion"
+            android:gravity="center"
+            android:text="@string/menu_Quiz"
+            android:textSize="40sp"/>
+
+        <ImageView
+            android:id="@+id/quizCard_questionImg"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/info"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/quizCard_btnAns1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@color/quizCard_btnAns"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/quizCard_btnAns2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@color/quizCard_btnAns"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/quizCard_btnAns3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@color/quizCard_btnAns"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/quizCard_btnAns4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@color/quizCard_btnAns"
+        android:textSize="40sp"/>
+
+    <ImageButton
+        android:id="@+id/quiz_back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="bottom|start"
+        android:src="@mipmap/back"
+        android:onClick="quizCard_goBack"
+        android:contentDescription="@string/studyCard_backArrow"
+        android:backgroundTint="@android:color/white"/>
+
+</LinearLayout>

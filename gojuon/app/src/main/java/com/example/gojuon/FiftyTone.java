@@ -30,6 +30,22 @@ public class FiftyTone extends AppCompatActivity
         katakana.add("オコソトノホモヨロヲ");
     }
 
+    public String getQuesAns(int type,int which)
+    {
+        if(type == 0)   //hiragana
+        {
+            return String.valueOf(getHiragana(which%5,which/5));
+        }
+        else if(type == 1)      //katakana
+        {
+            return String.valueOf(getKatakana(which%5,which/5));
+        }
+        else
+        {
+            return getWordSound(which);
+        }
+    }
+
     public String getWordSound(int pos)
     {
         switch (pos)
@@ -53,7 +69,7 @@ public class FiftyTone extends AppCompatActivity
         return s;
     }
 
-    public String getKatagkana(int index)
+    public String getHiragana(int index)
     {
         String s="";
         for(int i=0;i<5;i++)
@@ -64,7 +80,7 @@ public class FiftyTone extends AppCompatActivity
         return s;
     }
 
-    public String getHiragana(int index)
+    public String getKatagkana(int index)
     {
         String s="";
         for(int i=0;i<5;i++)
