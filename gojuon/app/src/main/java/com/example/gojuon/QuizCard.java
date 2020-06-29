@@ -1,8 +1,10 @@
 package com.example.gojuon;
 
+import android.content.DialogInterface;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +22,11 @@ import java.util.Set;
 
 public class QuizCard extends AppCompatActivity {
 
-    private Integer mode;
+    private Integer mode,totalQuest,correctQuest;
+    private Integer remainType,remainWhich,state;
     private FiftyTone fiftyTone = new FiftyTone();
-    private ImageView imgView;
-    private TextView textQuestion;
+    private ImageView imgView,imgResult;
+    private TextView textQuestion,textResult,textResultRate,textshowCorrectAns;
     private Random rand=new Random();
     private Button btnAns1,btnAns2,btnAns3,btnAns4;
     private ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
@@ -34,22 +37,51 @@ public class QuizCard extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_card);
 
         imgView = findViewById(R.id.quizCard_questionImg);
+        imgResult = findViewById(R.id.quizCard_showResult);
         textQuestion = findViewById(R.id.quizCard_question);
+        textResult = findViewById(R.id.quizCard_showResultNumber);
+        textResultRate = findViewById(R.id.quizCard_showResultRate);
+        textshowCorrectAns = findViewById(R.id.quizCard_txtshowCorrectAns);
         btnAns1 = findViewById(R.id.quizCard_btnAns1);
         btnAns2 = findViewById(R.id.quizCard_btnAns2);
         btnAns3 = findViewById(R.id.quizCard_btnAns3);
         btnAns4 = findViewById(R.id.quizCard_btnAns4);
 
         mode = getIntent().getIntExtra("testMode",0);
+
+        totalQuest = correctQuest = state = 0;
+        imgResult.setVisibility(View.INVISIBLE);
         if(mode == 0)       //考試範圍五十音
         {
             imgView.setVisibility(View.GONE);
+            setQuesAns();
         }
-
+        else if(mode == 1)
+        {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(QuizCard.this);
+            alertDialog.setTitle(getText(R.string.quizCard_alertSys));
+                alertDialog.setMessage(getText(R.string.quizCard_alertText));
+            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            alertDialog.setCancelable(false);
+            alertDialog.show();
+        }
     }
 
     public void quizCard_goBack(View v)
     {
+        finish();
+    }
+
+    public void quizCard_refreshQuest(View v)
+    {
+        state = 0;
+        imgResult.setVisibility(View.INVISIBLE);
+        textshowCorrectAns.setText("");
         setQuesAns();
     }
 
@@ -76,6 +108,8 @@ public class QuizCard extends AppCompatActivity {
             if(!(which == 36 || which == 38 || which == 46 || which == 48)) break;
         }
         textQuestion.setText(fiftyTone.getQuesAns(quesType,which));
+        remainType = ansType;       //保留答案所使用的種類
+        remainWhich = which;
         setAns(ansType,which);
     }
 
@@ -119,5 +153,59 @@ public class QuizCard extends AppCompatActivity {
                 }
             }
         }
+        state = 1;      //完成題目答案設置
     }
+
+    public void quizCard_checkAns(View v)
+    {
+        if(state == 0) return;
+        String select="";
+        totalQuest+=1;
+        switch (v.getId())
+        {
+            case R.id.quizCard_btnAns1:
+                select = String.valueOf(btnAns1.getText());
+                break;
+            case R.id.quizCard_btnAns2:
+                select = String.valueOf(btnAns2.getText());
+                break;
+            case R.id.quizCard_btnAns3:
+                select = String.valueOf(btnAns3.getText());
+                break;
+            case R.id.quizCard_btnAns4:
+                select = String.valueOf(btnAns4.getText());
+                break;
+            default:
+                break;
+        }
+        showResult(select.equals(fiftyTone.getQuesAns(remainType,remainWhich)));
+
+    }
+
+    private void showResult(boolean isEqual)
+    {
+        if(isEqual)
+        {
+            correctQuest+=1;
+            imgResult.setImageResource(R.mipmap.ans_correct);
+        }
+        else
+        {
+            imgResult.setImageResource(R.mipmap.ans_wrong);
+        }
+        textshowCorrectAns.setText(getText(R.string.quizCard_correctAns)
+                + fiftyTone.getQuesAns(remainType,remainWhich));
+        int d =(int)(correctQuest * 1.0 /totalQuest * 100);
+        imgResult.setVisibility(View.VISIBLE);
+        textResult.setText(String.format("%d / %d",correctQuest,totalQuest));
+        textResultRate.setText(String.format("%s : %d %%",getText(R.string.quizCard_correctRate)
+                ,d));
+        state = 0;      //寫題結束
+    }
+
+    public void quizCard_tapImgResult(View v)
+    {
+        imgResult.setVisibility(View.INVISIBLE);
+    }
+
 }

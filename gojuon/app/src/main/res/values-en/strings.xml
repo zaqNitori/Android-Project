@@ -26,4 +26,10 @@
     <string name="quiz_infoWordMsg1">1. words choose meaning</string>
     <string name="quiz_infoWordMsg2">2. meaning choose words</string>
 
+    <string name="quizCard_correctRate">Correct \n Rate</string>
+    <string name="quizCard_correctAns">Correct Answer \n</string>
+    <string name="quizCard_alertSys">System</string>
+    <string name="quizCard_alertText">Sorry.This function is not available yet.</string>
+
+
 </resources>

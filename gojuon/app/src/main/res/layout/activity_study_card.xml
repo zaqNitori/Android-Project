@@ -79,7 +79,7 @@
         android:onClick="studyCard_goPreStudyCard"
         android:src="@mipmap/leftarrow"
         android:contentDescription="@string/studyCard_larrow"
-        android:backgroundTint="@android:color/white"/>
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/studyCard_rightArrow"
@@ -91,7 +91,7 @@
         android:onClick="studyCard_goNextStudyCard"
         android:src="@mipmap/rarrow"
         android:contentDescription="@string/studyCard_rarrow"
-        android:backgroundTint="@android:color/white"/>
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/studyCard_back"
@@ -103,7 +103,7 @@
         android:src="@mipmap/back"
         android:onClick="studyCard_goBack"
         android:contentDescription="@string/studyCard_backArrow"
-        android:backgroundTint="@android:color/white"/>
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/studyCard_btnInfo"
@@ -114,7 +114,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:onClick="studyCard_setInfo"
         android:src="@mipmap/info"
-        android:backgroundTint="@android:color/white"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/studyCard_info"/>
 
 

@@ -26,4 +26,10 @@
     <string name="quiz_infoWordMsg1">1. 詞語選字義</string>
     <string name="quiz_infoWordMsg2">2. 字義選詞語</string>
 
+    <string name="quizCard_correctRate">正確率 </string>
+    <string name="quizCard_correctAns">正確答案 \n</string>
+    <string name="quizCard_alertSys">系統</string>
+    <string name="quizCard_alertText">很抱歉，此功能尚未完成。</string>
+
+
 </resources>
