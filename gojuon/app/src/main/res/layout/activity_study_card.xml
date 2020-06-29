@@ -32,7 +32,7 @@
 
 
     <TextView
-        android:id="@+id/study_infoHiragana"
+        android:id="@+id/studyCard_infoHiragana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -42,7 +42,7 @@
         app:layout_constraintRight_toRightOf="@id/studyCard_hiraganaTxt"/>
 
     <TextView
-        android:id="@+id/study_infoKatakana"
+        android:id="@+id/studyCard_infoKatakana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -61,6 +61,40 @@
         app:layout_constraintRight_toLeftOf="@id/studyCard_katakanaTxt"/>
 
     <TextView
+        android:id="@+id/studyCard_infoimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:text="@string/studyCard_image"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_infoHiragana"
+        app:layout_constraintLeft_toLeftOf="@id/studyCard_image"/>
+
+    <TextView
+        android:id="@+id/studyCard_infoWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:text="@string/studyCard_word"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_image"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/studyCard_infoMeaning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:text="@string/studyCard_mean"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_words"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
         android:id="@+id/studyCard_katakanaTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,6 +102,36 @@
         app:layout_constraintTop_toBottomOf="@id/studyCard_sound"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/studyCard_hiraganaTxt"/>
+
+    <ImageView
+        android:id="@+id/studyCard_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ans_wrong"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_infoimage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/studyCard_words"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_infoWord"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/studyCard_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/studyCard_infoMeaning"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <ImageButton
         android:id="@+id/studyCard_leftArrow"

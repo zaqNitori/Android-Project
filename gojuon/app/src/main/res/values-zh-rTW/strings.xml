@@ -16,6 +16,9 @@
     <string name="studyCard_larrow">前往上一張字卡</string>
     <string name="studyCard_rarrow">前往下一張字卡</string>
     <string name="studyCard_backArrow">往回</string>
+    <string name="studyCard_image">相關圖片</string>
+    <string name="studyCard_word">詞語</string>
+    <string name="studyCard_mean">意思</string>
 
     <string name="quiz_gojuon">五十音</string>
     <string name="quiz_word">詞語</string>

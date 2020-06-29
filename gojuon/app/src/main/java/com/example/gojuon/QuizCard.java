@@ -58,7 +58,7 @@ public class QuizCard extends AppCompatActivity {
         }
         else if(mode == 1)
         {
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(QuizCard.this);
+            /*AlertDialog.Builder alertDialog = new AlertDialog.Builder(QuizCard.this);
             alertDialog.setTitle(getText(R.string.quizCard_alertSys));
                 alertDialog.setMessage(getText(R.string.quizCard_alertText));
             alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -68,7 +68,8 @@ public class QuizCard extends AppCompatActivity {
                 }
             });
             alertDialog.setCancelable(false);
-            alertDialog.show();
+            alertDialog.show();*/
+            setQuesAns();
         }
     }
 
@@ -97,7 +98,7 @@ public class QuizCard extends AppCompatActivity {
                 if(ansType!=quesType) break;
             }
         }
-        else if(mode == 1)
+        else if(mode == 1)          //字義測驗
         {
             quesType=rand.nextInt(2);
             ansType=1-quesType;
@@ -105,9 +106,13 @@ public class QuizCard extends AppCompatActivity {
         while(true)
         {
             which=rand.nextInt(50);
-            if(!(which == 36 || which == 38 || which == 46 || which == 48)) break;
+            if(!(which == 36 || which == 38 || which == 46 || which == 48) && mode == 0)
+                break;
+            if(!(which == 36 || which == 38 || which == 46 || which == 48 || which == 5 || which == 6
+             || which == 7 || which == 8 || which == 9 || which == 47 || which == 49) && mode == 1)
+                break;
         }
-        textQuestion.setText(fiftyTone.getQuesAns(quesType,which));
+        textQuestion.setText(fiftyTone.getQuesAns(mode,quesType,which));
         remainType = ansType;       //保留答案所使用的種類
         remainWhich = which;
         setAns(ansType,which);
@@ -118,39 +123,39 @@ public class QuizCard extends AppCompatActivity {
         int place,answhich;
         integerArrayList.clear();
         integerArrayList.add(which);
-        if(mode == 0)
-        {
-            place = rand.nextInt(4) + 1;
-            for(int i=1;i<5;i++) {
-                if (i == place) answhich = which;
-                else {
-                    while (true) {
-                        answhich = rand.nextInt(50);
-                        if(answhich == 36 || answhich == 38 || answhich == 46 || answhich == 48)
-                            continue;
-                        if (!integerArrayList.contains(answhich)) {
-                            integerArrayList.add(answhich);
-                            break;
-                        }
+        place = rand.nextInt(4) + 1;
+        for(int i=1;i<5;i++) {
+            if (i == place) answhich = which;
+            else {
+                while (true) {
+                    answhich = rand.nextInt(50);
+                    if((answhich == 36 || answhich == 38 || answhich == 46 || answhich == 48) && mode == 0)
+                        continue;
+                    if((answhich == 36 || answhich == 38 || answhich == 46 || answhich == 48 || answhich == 5 || answhich == 6
+                            || answhich == 7 || answhich == 8 || answhich == 9 || answhich == 47 || answhich == 49) && mode == 1)
+                        continue;
+                    if (!integerArrayList.contains(answhich)) {
+                        integerArrayList.add(answhich);
+                        break;
                     }
                 }
-                switch (i)
-                {
-                    case 1:
-                        btnAns1.setText(fiftyTone.getQuesAns(ansType, answhich));
-                        break;
-                    case 2:
-                        btnAns2.setText(fiftyTone.getQuesAns(ansType, answhich));
-                        break;
-                    case 3:
-                        btnAns3.setText(fiftyTone.getQuesAns(ansType, answhich));
-                        break;
-                    case 4:
-                        btnAns4.setText(fiftyTone.getQuesAns(ansType, answhich));
-                        break;
-                    default:
-                        break;
-                }
+            }
+            switch (i)
+            {
+                case 1:
+                    btnAns1.setText(fiftyTone.getQuesAns(mode,ansType, answhich));
+                    break;
+                case 2:
+                    btnAns2.setText(fiftyTone.getQuesAns(mode,ansType, answhich));
+                    break;
+                case 3:
+                    btnAns3.setText(fiftyTone.getQuesAns(mode,ansType, answhich));
+                    break;
+                case 4:
+                    btnAns4.setText(fiftyTone.getQuesAns(mode,ansType, answhich));
+                    break;
+                default:
+                    break;
             }
         }
         state = 1;      //完成題目答案設置
@@ -178,7 +183,7 @@ public class QuizCard extends AppCompatActivity {
             default:
                 break;
         }
-        showResult(select.equals(fiftyTone.getQuesAns(remainType,remainWhich)));
+        showResult(select.equals(fiftyTone.getQuesAns(mode,remainType,remainWhich)));
 
     }
 
@@ -194,7 +199,7 @@ public class QuizCard extends AppCompatActivity {
             imgResult.setImageResource(R.mipmap.ans_wrong);
         }
         textshowCorrectAns.setText(getText(R.string.quizCard_correctAns)
-                + fiftyTone.getQuesAns(remainType,remainWhich));
+                + fiftyTone.getQuesAns(mode,remainType,remainWhich));
         int d =(int)(correctQuest * 1.0 /totalQuest * 100);
         imgResult.setVisibility(View.VISIBLE);
         textResult.setText(String.format("%d / %d",correctQuest,totalQuest));

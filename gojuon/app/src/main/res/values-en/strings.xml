@@ -16,6 +16,9 @@
     <string name="studyCard_larrow">go to Previous Card</string>
     <string name="studyCard_rarrow">go to Next Card</string>
     <string name="studyCard_backArrow">go Back</string>
+    <string name="studyCard_image">Association Image</string>
+    <string name="studyCard_word">Vocabulary</string>
+    <string name="studyCard_mean">Meaning</string>
 
     <string name="quiz_gojuon">GOJUON</string>
     <string name="quiz_word">WORDS</string>
