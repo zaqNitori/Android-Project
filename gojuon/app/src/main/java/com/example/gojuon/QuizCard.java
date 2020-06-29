@@ -58,17 +58,6 @@ public class QuizCard extends AppCompatActivity {
         }
         else if(mode == 1)
         {
-            /*AlertDialog.Builder alertDialog = new AlertDialog.Builder(QuizCard.this);
-            alertDialog.setTitle(getText(R.string.quizCard_alertSys));
-                alertDialog.setMessage(getText(R.string.quizCard_alertText));
-            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            });
-            alertDialog.setCancelable(false);
-            alertDialog.show();*/
             setQuesAns();
         }
     }
@@ -203,8 +192,8 @@ public class QuizCard extends AppCompatActivity {
         int d =(int)(correctQuest * 1.0 /totalQuest * 100);
         imgResult.setVisibility(View.VISIBLE);
         textResult.setText(String.format("%d / %d",correctQuest,totalQuest));
-        textResultRate.setText(String.format("%s : %d %%",getText(R.string.quizCard_correctRate)
-                ,d));
+        textResultRate.setText(String.format("%s : %d %%"
+                ,getText(R.string.quizCard_correctRate),d));
         state = 0;      //寫題結束
     }
 
