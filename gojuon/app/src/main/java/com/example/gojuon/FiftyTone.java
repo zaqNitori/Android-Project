@@ -42,7 +42,7 @@ public class FiftyTone extends AppCompatActivity
         ArrayList<String> stringArrayList4 = new ArrayList<String>();
         ArrayList<String> stringArrayList5 = new ArrayList<String>();
         stringArrayList.add("秋天");//0
-        stringArrayList.add("--");
+        stringArrayList.add("雨傘");
         stringArrayList.add("櫻花");
         stringArrayList.add("達人");
         stringArrayList.add("鳴人");
@@ -54,7 +54,7 @@ public class FiftyTone extends AppCompatActivity
         meaning.add(stringArrayList);
 
         stringArrayList2.add("烏賊");//1
-        stringArrayList2.add("--");
+        stringArrayList2.add("機會");
         stringArrayList2.add("觸手");
         stringArrayList2.add("力量");
         stringArrayList2.add("紅蘿蔔");
@@ -66,7 +66,7 @@ public class FiftyTone extends AppCompatActivity
         meaning.add(stringArrayList2);
 
         stringArrayList3.add("海膽");//2
-        stringArrayList3.add("--");
+        stringArrayList3.add("國家");
         stringArrayList3.add("西瓜");
         stringArrayList3.add("花蕾");
         stringArrayList3.add("布偶");
@@ -78,7 +78,7 @@ public class FiftyTone extends AppCompatActivity
         meaning.add(stringArrayList3);
 
         stringArrayList4.add("電影");//3
-        stringArrayList4.add("--");
+        stringArrayList4.add("獸");
         stringArrayList4.add("世界");
         stringArrayList4.add("天氣");
         stringArrayList4.add("青蔥");
@@ -90,7 +90,7 @@ public class FiftyTone extends AppCompatActivity
         meaning.add(stringArrayList4);
 
         stringArrayList5.add("王子");//4
-        stringArrayList5.add("--");
+        stringArrayList5.add("皇帝");
         stringArrayList5.add("蕎麥麵");
         stringArrayList5.add("豚骨");
         stringArrayList5.add("能力");
@@ -110,7 +110,7 @@ public class FiftyTone extends AppCompatActivity
         ArrayList<String> stringArrayList4 = new ArrayList<String>();
         ArrayList<String> stringArrayList5 = new ArrayList<String>();
         stringArrayList.add("あき");//0
-        stringArrayList.add("--");
+        stringArrayList.add("かさ");
         stringArrayList.add("さくら");
         stringArrayList.add("たつじん");
         stringArrayList.add("なると");
@@ -122,7 +122,7 @@ public class FiftyTone extends AppCompatActivity
         vocabulary.add(stringArrayList);
 
         stringArrayList2.add("イカ");//1
-        stringArrayList2.add("--");
+        stringArrayList2.add("きかい");
         stringArrayList2.add("しょくしゅ");
         stringArrayList2.add("ちから");
         stringArrayList2.add("にんじん");
@@ -134,7 +134,7 @@ public class FiftyTone extends AppCompatActivity
         vocabulary.add(stringArrayList2);
 
         stringArrayList3.add("うに");//2
-        stringArrayList3.add("--");
+        stringArrayList3.add("くに");
         stringArrayList3.add("スイカ");
         stringArrayList3.add("つぼみ");
         stringArrayList3.add("ぬいぐるみ");
@@ -146,7 +146,7 @@ public class FiftyTone extends AppCompatActivity
         vocabulary.add(stringArrayList3);
 
         stringArrayList4.add("えいが");//3
-        stringArrayList4.add("--");
+        stringArrayList4.add("けもの");
         stringArrayList4.add("せかい");
         stringArrayList4.add("てんき");
         stringArrayList4.add("ネギ");
@@ -158,7 +158,7 @@ public class FiftyTone extends AppCompatActivity
         vocabulary.add(stringArrayList4);
 
         stringArrayList5.add("おうじ");//4
-        stringArrayList5.add("--");
+        stringArrayList5.add("こうてい");
         stringArrayList5.add("そば");
         stringArrayList5.add("とんこつ");
         stringArrayList5.add("のうりょく");
