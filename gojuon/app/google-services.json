@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1087915144800",
+    "firebase_url": "https://nihongoapp-73447.firebaseio.com",
+    "project_id": "nihongoapp-73447",
+    "storage_bucket": "nihongoapp-73447.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087915144800:android:4ba5a441c10453f7183505",
+        "android_client_info": {
+          "package_name": "com.example.gojuon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087915144800-9goc9iunalconisul004d94i48pqcdta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gojuon",
+            "certificate_hash": "46e3b54a65eb90f3c7db0b281fa7ebf96088f6a3"
+          }
+        },
+        {
+          "client_id": "1087915144800-r76qsoc4ofgaa44pq58efp1b0nvbfkfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmRTa1chO0Sp6eHmRXtLvoa-1VG-UgMQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087915144800-r76qsoc4ofgaa44pq58efp1b0nvbfkfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

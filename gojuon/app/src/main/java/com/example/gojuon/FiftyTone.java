@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,8 @@ public class FiftyTone extends AppCompatActivity
     private ArrayList<CharSequence> katakana = new ArrayList<CharSequence>();
     private ArrayList<ArrayList<String>> vocabulary = new ArrayList<ArrayList<String>>();
     private ArrayList<ArrayList<String>> meaning = new ArrayList<ArrayList<String>>();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     public FiftyTone()
     {
